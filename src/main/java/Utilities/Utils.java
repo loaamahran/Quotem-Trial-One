@@ -4,7 +4,6 @@ import com.assertthat.selenium_shutterbug.core.Capture;
 import com.assertthat.selenium_shutterbug.core.Shutterbug;
 import com.google.common.io.Files;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -42,8 +41,8 @@ public class Utils {
     }
 
     //TODO:Screenshot
-    public static void takeScreenShot(WebDriver driver, By locator, String ImgName) throws IOException {
-        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(locator));
+    public static void takeScreenShot(WebDriver driver, String ImgName) throws IOException {
+       generalWait(driver);
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File dst = new File(SCREENSHOTS_PATH + ImgName + timeStamp() + ".png");
         Files.copy(src, dst);
@@ -99,8 +98,29 @@ public class Utils {
         List<WebElement> dropDownOptions = driver.findElements(locator);
         for (int i = 1; i <= dropDownOptions.size(); i++) {
 
+        }
+        }
+   //TODO:getCookies
+   public static Set<Cookie> getAllCookies(WebDriver driver){
+    return  driver.manage().getCookies();
+        }
+    //TODO:AddCookies
+    public static void restoreSession(WebDriver driver, Set<Cookie> cookies) {
+        for (Cookie cookie : cookies) {
+            driver.manage().addCookie(cookie);
 
         }
     }
+    public static File getLatestFile(String folderPath) {
+        File folder = new File(folderPath);
+        File[] files = folder.listFiles();
+        assert files != null;
+        if (files.length == 0)
+            return null;
+        Arrays.sort(files, Comparator.comparingLong(File::lastModified).reversed());
 
-}
+        return files[0];
+    }
+
+    }
+

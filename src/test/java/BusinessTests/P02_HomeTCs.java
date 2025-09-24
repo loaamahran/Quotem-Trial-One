@@ -12,15 +12,8 @@ import java.time.Duration;
 
 import static DriverFactory.DriverFactory.*;
 
-public class P02_HomeTCs {
-@BeforeClass
-    public void setup() throws IOException {
-      browserSetup(DataUtils.getPropertyData("environments", "Browser"));
-    LogsUtils.info("Open Chrome Browser");
-        getDriver().get(DataUtils.getPropertyData("environments", "BUSINESS_STAGING_URL"));
-    LogsUtils.info("Open Business Account");
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-    }
+public class P02_HomeTCs extends BaseTest{
+
  @Test(groups = "valid")
     public void RequisitionNavigate() throws IOException {
      new P01_LoginPage(getDriver()).

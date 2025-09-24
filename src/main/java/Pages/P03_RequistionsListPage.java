@@ -13,7 +13,7 @@ public class P03_RequistionsListPage {
     public P03_RequistionsListPage clickOnCreateButton(){
         Utils.click(driver, createButtonLocator);
     return this;}
-    public P04_CreateRFPPage createRFP(){
+    public P04_CreateRFPStep1Page createRFP(){
         Utils.click(driver, createRFPLocator);
-    return new P04_CreateRFPPage(driver);}
+    return new P04_CreateRFPStep1Page(driver);}
 }
