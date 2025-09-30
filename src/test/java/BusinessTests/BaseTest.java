@@ -21,8 +21,8 @@ public class BaseTest {
         LogsUtils.info("Open Business Account");
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
-    @AfterMethod
-    public void tearDown(){
+  /*  @AfterMethod
+   public void tearDown(){
         DriverFactory.teardown();
-    }
+    }*/
 }

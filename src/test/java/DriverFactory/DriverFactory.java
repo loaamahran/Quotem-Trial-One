@@ -15,14 +15,14 @@ public static void browserSetup(String browser)
 {switch(browser.toLowerCase()){
     case("chrome"):
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
+        options.addArguments("--start-fullscreen");
 
         driver.set(new ChromeDriver());
 
 break;
     case("firefox"):
         FirefoxOptions options1 = new FirefoxOptions();
-        options1.addArguments("--start-maximized");
+        options1.addArguments("--start--fullscreen");
 driver.set(new FirefoxDriver());
         break;
     case("safari"):

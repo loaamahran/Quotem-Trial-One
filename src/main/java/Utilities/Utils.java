@@ -14,7 +14,7 @@ import java.time.Duration;
 import java.util.*;
 
 public class Utils {
-    static WebDriver driver;
+   // static WebDriver driver;
     private static String SCREENSHOTS_PATH = "Test-output/ScreenShots/";
 
     //TODO:SendKeys
@@ -54,7 +54,7 @@ public class Utils {
         return new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
-    public static WebElement findWebElement(By locator) {
+    public static WebElement findWebElement(WebDriver driver,By locator) {
         return driver.findElement(locator);
     }
 
@@ -73,7 +73,7 @@ public class Utils {
 
     //TODO:Scroll
     public void scroll(WebDriver driver, By locator) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", findWebElement(locator));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", findWebElement(driver,locator));
     }
 
     //TODO:GetText
@@ -85,7 +85,7 @@ public class Utils {
 
     //TODO:GetFullScreenShot
     public static void captureFullScreenShot(WebDriver driver, By locator) {
-        Shutterbug.shootPage(driver, Capture.FULL_SCROLL).highlight(findWebElement(locator)).save(SCREENSHOTS_PATH);
+        Shutterbug.shootPage(driver, Capture.FULL_SCROLL).highlight(findWebElement(driver,locator)).save(SCREENSHOTS_PATH);
     }
 
     //TODO:Generate RandomNumber
@@ -121,6 +121,8 @@ public class Utils {
 
         return files[0];
     }
-
+    public static void scrolling(WebDriver driver, By locator) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", findWebElement(driver, locator));
+    }
     }
 
