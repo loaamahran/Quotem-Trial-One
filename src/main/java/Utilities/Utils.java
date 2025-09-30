@@ -15,7 +15,7 @@ import java.util.*;
 
 public class Utils {
     static WebDriver driver;
-    private static String SCREENSHOTS_PATH = "Test-output/ScreenShots/";
+    private static String SCREENSHOTS_PATH = "Test-output/Screenshots/";
 
     //TODO:SendKeys
     public static void sendData(WebDriver driver, By locator, String data) {
