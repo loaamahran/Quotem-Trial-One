@@ -2,9 +2,11 @@ package Pages;
 
 import Utilities.LogsUtils;
 import Utilities.Utils;
+import jdk.jshell.execution.Util;
 import net.bytebuddy.NamingStrategy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class P04_CreateRFPStep1Page {
     WebDriver driver;
@@ -22,15 +24,16 @@ private final By closeDateSelection=By.xpath("//button[text()='29']");
 private final By deliveryDateSelection=By.xpath("//button[text()='30']");
 private final By nextButton=By.xpath("//button[@type='submit']");
 private final By requestContnetStep2Header=By.xpath("//h4[text()='Request Content']");
+private final By titleValidationLocator=By.xpath("//p[contains(text(),'Title')]");
     public P04_CreateRFPStep1Page(WebDriver driver) {
         this.driver = driver;
     }
-/*public P04_CreateRFPPage setTitle(String title){
+public P04_CreateRFPStep1Page setTitle(String title){
     Utils.sendData(driver, titleLocator, title);
     LogsUtils.info("Add RFP Title");
 return this;}
 
-public P04_CreateRFPPage setDescription(String description){
+/*public P04_CreateRFPPage setDescription(String description){
     Utils.sendData(driver, descriptionLocator, description);
     LogsUtils.info("Add RFP Description");
     return this;}
@@ -78,9 +81,12 @@ public P05_CreateRFPStep2Page RFPStep1(String title, String description){
 return new P05_CreateRFPStep2Page(driver);
 }
 public String getStep2Header(){
-    return Utils.findWebElement(requestContnetStep2Header).getText();
+    return Utils.findWebElement(driver,requestContnetStep2Header).getText();
 }
-public boolean verifyNavigationFromStep1(){
-    //String actualText = Utils.findWebElement(requestContnetStep2Header).getText();
-    return (getStep2Header()).equals("Request Content");
+
+
+public String titleText(){
+     return Utils.findWebElement(driver,titleValidationLocator).getText();
+ //title.getText();
+
 }}
