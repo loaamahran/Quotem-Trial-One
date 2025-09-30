@@ -10,6 +10,7 @@ import org.testng.annotations.*;
 import java.io.FileNotFoundException;
 
 public class P01_LoginTCs extends BaseTest {
+
 // LoginTCs loginTcs=new LoginTCs();
 
 String invalidEmail=new Faker().name()+"@teml.net";
