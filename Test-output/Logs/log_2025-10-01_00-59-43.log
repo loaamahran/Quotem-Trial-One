@@ -1,0 +1,16 @@
+[INFO] 01-10-2025 00:59:43 [main] [BusinessTests.BaseTest.setup(BaseTest.java:19)] - Open Chrome Browser
+[INFO] 01-10-2025 00:59:44 [main] [BusinessTests.BaseTest.setup(BaseTest.java:21)] - Open Business Account
+[INFO] 01-10-2025 00:59:44 [main] [Listeners.InvokeMethodListener.afterInvocation(InvokeMethodListener.java:32)] - Test Case setup passed
+[INFO] 01-10-2025 00:59:44 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:11)] - Test Case: null Started
+[INFO] 01-10-2025 00:59:48 [main] [Pages.P04_CreateRFPStep1Page.RFPStep1(P04_CreateRFPStep1Page.java:56)] - Add RFP Title
+[INFO] 01-10-2025 00:59:48 [main] [Pages.P04_CreateRFPStep1Page.RFPStep1(P04_CreateRFPStep1Page.java:59)] - Add RFP Description
+[INFO] 01-10-2025 00:59:48 [main] [Pages.P04_CreateRFPStep1Page.RFPStep1(P04_CreateRFPStep1Page.java:62)] -  Project DropDown is opened 
+[INFO] 01-10-2025 00:59:51 [main] [Pages.P04_CreateRFPStep1Page.RFPStep1(P04_CreateRFPStep1Page.java:65)] -  Project is number6 is selected
+[INFO] 01-10-2025 00:59:57 [main] [Pages.P05_CreateRFPStep2Page.createSection(P05_CreateRFPStep2Page.java:33)] - Section 0 Name is addedcom.github.javafaker.Name@1dde4cb2
+[INFO] 01-10-2025 01:00:00 [main] [Pages.P05_CreateRFPStep2Page.createSection(P05_CreateRFPStep2Page.java:33)] - Section 1 Name is addedcom.github.javafaker.Name@1dde4cb2
+[INFO] 01-10-2025 01:00:02 [main] [Pages.P05_CreateRFPStep2Page.createSection(P05_CreateRFPStep2Page.java:33)] - Section 2 Name is addedcom.github.javafaker.Name@1dde4cb2
+[INFO] 01-10-2025 01:00:05 [main] [Pages.P05_CreateRFPStep2Page.createSection(P05_CreateRFPStep2Page.java:33)] - Section 3 Name is addedcom.github.javafaker.Name@1dde4cb2
+[INFO] 01-10-2025 01:00:08 [main] [Pages.P05_CreateRFPStep2Page.createSection(P05_CreateRFPStep2Page.java:33)] - Section 4 Name is addedcom.github.javafaker.Name@1dde4cb2
+[INFO] 01-10-2025 01:00:08 [main] [Pages.P05_CreateRFPStep2Page.createSection(P05_CreateRFPStep2Page.java:37)] - Number of generated sections are: 5
+[INFO] 01-10-2025 01:00:08 [main] [Listeners.InvokeMethodListener.afterInvocation(InvokeMethodListener.java:32)] - Test Case createRFPStep2ValidData passed
+[INFO] 01-10-2025 01:00:08 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:15)] - Test Case: null Passed
